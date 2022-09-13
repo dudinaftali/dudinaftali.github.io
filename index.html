@@ -2,20 +2,44 @@ Hello world
 
 
 
-<!-- Bizzabo Tickets Widget Start -->
-<div class="bizzabo-tickets-widget" data-event-id="425993" data-params="isInMinisite=true&widgetId=197001"></div>
-<script type="text/javascript">(function(){var bz=document.createElement("script");bz.type="text/javascript";bz.async=true;bz.src="https://organizer.bizzabo.com/widgets/tickets/tickets.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(bz,s);})();</script>
-<!-- Bizzabo Tickets Widget End -->
+<!-- Bizzabo "General Admission" Registration Flow Widget Begin -->
+<div style="display: inline-flex; width: 100%;"
+    class="bz-widget-tickets-inline"
+    data-flow-id="1afd0046-2d66-4cd7-a418-ee8634f0dbf7"
+    data-event-id="425993"
+    data-registration-proxy="true">
+</div>
 
-
-
-<!-- Bizzabo Section Begin -->
-<div class="bizzabo-sections-widget" data-unique-name="425993" data-tab-id="2304861" data-internal-website-base-url="https://events.bizzabo.com/425993"></div>
-<script type="text/javascript">
-    !function() {
-        var e = document.createElement("script");
-        window.bz_widget_env = "https://events.bizzabo.com", e.type = "text/javascript", e.async = !0, e.src = "https://organizer.bizzabo.com/widgets/sections/sections.js";
-        var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+<script type="text/javascript"
+    class="bz-inline-widget-script"
+    id="bz-inline-registration-script-1afd0046-2d66-4cd7-a418-ee8634f0dbf7">
+    (function(){
+    var bz=document.createElement("script");
+    bz.type="text/javascript";
+    bz.async=true;
+    bz.src = "https://organizer.bizzabo.com/widgets/flows/tickets/ticketsSelect.js";
+    var s=document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bz,s);
+    })();
 </script>
-<!-- Bizzabo Section End -->
 
+<script type = "text/javascript"
+    id="bz-popup-registration-script-1afd0046-2d66-4cd7-a418-ee8634f0dbf7"
+    data-event-id="425993"
+    data-registration-proxy="true"
+    data-unique-name="425993"
+    data-flow-id="1afd0046-2d66-4cd7-a418-ee8634f0dbf7"
+    data-inline-widget="true"
+    >
+    (function() {
+            var bz = document.createElement("script");
+            bz.type = "text/javascript";
+            bz.async = true;
+            bz.setAttribute("data-flow-id","1afd0046-2d66-4cd7-a418-ee8634f0dbf7")
+            bz.setAttribute("data-inline-widget", "true")
+            bz.src = "https://organizer.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bz, s);
+        })();
+</script>
+<!-- Bizzabo "General Admission" Registration Flow Widget End -->
