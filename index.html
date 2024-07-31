@@ -19,13 +19,27 @@
         .popoutwidget:hover {
             cursor: pointer;
         }
+
+        .inlinewidget {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: default; /* This prevents the cursor from changing to a pointer */
+        }
     </style>
 </head>
 <body>
     <center>
         <button class="popoutwidget">Pop out widget</button>
+        <button class="inlinewidget">The inline widget</button>
     </center>
-    <!-- Bizzabo "General Admission" Registration Flow Widget Begin -->
+    <!-- Bizzabo "General Admission" Pop out widget Registration Flow Widget Begin -->
 <script type = "text/javascript"
     id="bz-popup-registration-script-e4e90e28-1841-4187-b713-ecfe7e2b2ea5"
     data-event-id="618473"
@@ -34,6 +48,48 @@
     data-flow-id="e4e90e28-1841-4187-b713-ecfe7e2b2ea5"
     data-inline-widget="true"
     data-element-id="" data-element-class="popoutwidget">
+    (function() {
+            var bz = document.createElement("script");
+            bz.type = "text/javascript";
+            bz.async = true;
+            bz.setAttribute("data-flow-id","e4e90e28-1841-4187-b713-ecfe7e2b2ea5")
+            bz.setAttribute("data-inline-widget", "true")
+            bz.src = "https://organizer.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bz, s);
+        })();
+</script>
+<!-- Bizzabo "General Admission" Registration Flow Widget End -->
+    
+<!-- Bizzabo "General Admission" In Line Registration Flow Widget Begin -->
+<div style="display: inline-flex; width: 100%;"
+    class="bz-widget-tickets-inline"
+    data-flow-id="e4e90e28-1841-4187-b713-ecfe7e2b2ea5"
+    data-event-id="618473"
+    data-registration-proxy="true">
+</div>
+
+<script type="text/javascript"
+    class="bz-inline-widget-script"
+    id="bz-inline-registration-script-e4e90e28-1841-4187-b713-ecfe7e2b2ea5">
+    (function(){
+    var bz=document.createElement("script");
+    bz.type="text/javascript";
+    bz.async=true;
+    bz.src = "https://organizer.bizzabo.com/widgets/flows/tickets/ticketsSelect.js";
+    var s=document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bz,s);
+    })();
+</script>
+
+<script type = "text/javascript"
+    id="bz-popup-registration-script-e4e90e28-1841-4187-b713-ecfe7e2b2ea5"
+    data-event-id="618473"
+    data-registration-proxy="true"
+    data-unique-name="618473"
+    data-flow-id="e4e90e28-1841-4187-b713-ecfe7e2b2ea5"
+    data-inline-widget="true"
+    >
     (function() {
             var bz = document.createElement("script");
             bz.type = "text/javascript";
