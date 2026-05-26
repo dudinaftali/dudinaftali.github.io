@@ -1,72 +1,416 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Blue Button</title>
+    <title>Registration</title>
     <style>
-        .popoutwidget {
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            margin: 20px 0 30px;
+        }
+
+        .columns {
+            display: flex;
+            gap: 0;
+            min-height: 80vh;
+        }
+
+        .column {
+            flex: 1;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .column-left {
+            border-right: 1px solid #ccc;
+        }
+
+        .column-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subsection {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .subsection-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .subsection-event-id {
+            font-size: 12px;
+            font-weight: normal;
+            color: #888;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .bz-button {
             background-color: blue;
             color: white;
             border: none;
             padding: 15px 32px;
             text-align: center;
-            text-decoration: none;
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
             cursor: pointer;
         }
 
-        .popoutwidget:hover {
-            cursor: pointer;
+        .bz-button:hover {
+            background-color: #0000cc;
         }
 
-        .inlinewidget {
-            background-color: blue;
-            color: white;
-            border: none;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
+        .inline-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 20px 0 8px;
         }
-    </style> 
+
+        .dashboard-link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 13px;
+            color: #0057d8;
+            text-decoration: none;
+            border: 1px solid #0057d8;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .dashboard-link:hover {
+            background-color: #0057d8;
+            color: white;
+        }
+
+        .event-website-link {
+            position: absolute;
+            top: 0;
+            right: 160px;
+            font-size: 13px;
+            color: #555;
+            text-decoration: none;
+            border: 1px solid #aaa;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .event-website-link:hover {
+            background-color: #555;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <center>
-        <button class="popoutwidget">Pop out widget - YMCA</button>
-        <button class="popoutwidget2">Inline widget</button>
-        <p style="font-size: 18px; color: black; margin-top: 20px;">
-            Welcome to the registration page! Please select an option above to proceed.
-        </p>
-    </center>
+    <p class="page-title">Welcome to the registration page! Please select an option below to proceed.</p>
 
-    <!-- PASTE EMBEDED WIDGETS BELOW THIS LINE>
-<!-- Bizzabo "RSVP" Registration Flow Widget Begin -->
-<!-- Bizzabo "RSVP" Registration Flow Widget Begin -->
-<script type = "text/javascript"
-    id="bz-popup-registration-script-3ddd3695-48b3-4327-b59a-70660b57698e"
-    data-event-id="2"
-    data-registration-proxy="true"
-    data-unique-name="2"
-    data-flow-id="3ddd3695-48b3-4327-b59a-70660b57698e"
-    data-inline-widget="true"
-    data-element-id="popoutwidget" data-element-class="">
-    (function() {
-            var bz = document.createElement("script");
-            bz.type = "text/javascript";
-            bz.async = true;
-            bz.setAttribute("data-flow-id","3ddd3695-48b3-4327-b59a-70660b57698e")
-            bz.setAttribute("data-inline-widget", "true")
-            bz.src = "https://ymca-organizer.ext.dev.bizzabo.com/widgets/flows/popup/registrationPopup.js";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bz, s);
+    <div class="columns">
+        <!-- DNLM4 column -->
+        <div class="column column-left">
+            <div class="column-title">DNLM4</div>
+
+            <div class="subsection" id="dnlm4-rsvp">
+                <div class="subsection-title">RSVP <span class="subsection-event-id" id="eventid-dnlm4-rsvp"></span></div>
+                <button class="bz-button" id="btn-dnlm4-rsvp-popout">Pop out widget - dnlm4</button>
+                <a class="event-website-link" id="eventsite-dnlm4-rsvp" href="#" target="_blank" style="display:none">Open Event Website</a>
+                <a class="dashboard-link" id="dashboard-dnlm4-rsvp" href="#" target="_blank" style="display:none">Open Dashboard</a>
+                <!-- Bizzabo "RSVP" Registration Flow Widget Begin -->
+                <script type="text/javascript"
+                    id="bz-popup-registration-script-7165647c-f63a-45c1-b7f9-a4f83b198259"
+                    data-event-id="243"
+                    data-registration-proxy="true"
+                    data-unique-name="243"
+                    data-flow-id="7165647c-f63a-45c1-b7f9-a4f83b198259"
+                    data-inline-widget="true"
+                    data-element-id="" data-element-class="popoutwidget">
+                    (function() {
+                        var bz = document.createElement("script");
+                        bz.type = "text/javascript";
+                        bz.async = true;
+                        bz.setAttribute("data-flow-id","7165647c-f63a-45c1-b7f9-a4f83b198259")
+                        bz.setAttribute("data-inline-widget", "true")
+                        bz.src = "https://dnlm4-organizer.ext.dev.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bz, s);
+                    })();
+                </script>
+                <!-- Bizzabo "RSVP" Registration Flow Widget End -->
+            </div>
+
+            <div class="subsection" id="dnlm4-trreg">
+                <div class="subsection-title">TR_Reg <span class="subsection-event-id" id="eventid-dnlm4-trreg"></span></div>
+                <button class="bz-button" id="btn-dnlm4-trreg-popout">Pop out widget - dnlm4</button>
+                <a class="event-website-link" id="eventsite-dnlm4-trreg" href="#" target="_blank" style="display:none">Open Event Website</a>
+                <a class="dashboard-link" id="dashboard-dnlm4-trreg" href="#" target="_blank" style="display:none">Open Dashboard</a>
+                <div class="inline-title" id="inline-title-dnlm4-trreg">Inline Widget</div>
+                <div id="inlinewidget-dnlm4-trreg"></div>
+                <!-- Bizzabo "General Admission" Registration Flow Widget Begin -->
+                <script type="text/javascript"
+                    id="bz-popup-registration-script-3b1af554-d479-41b1-8327-f702789f2570"
+                    data-event-id="362"
+                    data-registration-proxy="true"
+                    data-unique-name="362"
+                    data-flow-id="3b1af554-d479-41b1-8327-f702789f2570"
+                    data-inline-widget="true"
+                    data-element-id="" data-element-class="popoutwidget">
+                    (function() {
+                        var bz = document.createElement("script");
+                        bz.type = "text/javascript";
+                        bz.async = true;
+                        bz.setAttribute("data-flow-id","3b1af554-d479-41b1-8327-f702789f2570")
+                        bz.setAttribute("data-inline-widget", "true")
+                        bz.src = "https://dnlm4-organizer.ext.dev.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bz, s);
+                    })();
+                </script>
+                <!-- Bizzabo "General Admission" Registration Flow Widget End -->
+                <!-- Bizzabo "General Admission" Registration Flow Widget Begin -->
+                <div style="display: inline-flex; width: 100%;"
+                    class="bz-widget-tickets-inline"
+                    data-flow-id="3b1af554-d479-41b1-8327-f702789f2570"
+                    data-event-id="362"
+                    data-registration-proxy="true">
+                </div>
+
+                <script type="text/javascript"
+                    class="bz-inline-widget-script"
+                    id="bz-inline-registration-script-3b1af554-d479-41b1-8327-f702789f2570"
+                    data-event-id="362"
+                    >
+                    (function(){
+                    var bz=document.createElement("script");
+                    bz.type="text/javascript";
+                    bz.async=true;
+                    bz.src = "https://dnlm4-organizer.ext.dev.bizzabo.com/widgets/flows/tickets/ticketsSelect.js";
+                    var s=document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bz,s);
+                    })();
+                </script>
+
+                <script type="text/javascript"
+                    id="bz-popup-registration-script-3b1af554-d479-41b1-8327-f702789f2570-inline"
+                    data-event-id="362"
+                    data-registration-proxy="true"
+                    data-unique-name="362"
+                    data-flow-id="3b1af554-d479-41b1-8327-f702789f2570"
+                    data-inline-widget="true"
+                    >
+                    (function() {
+                        var bz = document.createElement("script");
+                        bz.type = "text/javascript";
+                        bz.async = true;
+                        bz.setAttribute("data-flow-id","3b1af554-d479-41b1-8327-f702789f2570")
+                        bz.setAttribute("data-inline-widget", "true")
+                        bz.src = "https://dnlm4-organizer.ext.dev.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bz, s);
+                    })();
+                </script>
+                <!-- Bizzabo "General Admission" Registration Flow Widget End -->
+            </div>
+        </div>
+
+        <!-- YMCA column -->
+        <div class="column">
+            <div class="column-title">YMCA</div>
+
+            <div class="subsection" id="ymca-rsvp">
+                <div class="subsection-title">RSVP <span class="subsection-event-id" id="eventid-ymca-rsvp"></span></div>
+                <button class="bz-button" id="btn-ymca-rsvp-popout">Pop out widget - YMCA</button>
+                <a class="event-website-link" id="eventsite-ymca-rsvp" href="#" target="_blank" style="display:none">Open Event Website</a>
+                <a class="dashboard-link" id="dashboard-ymca-rsvp" href="#" target="_blank" style="display:none">Open Dashboard</a>
+                <!-- Bizzabo "RSVP" Registration Flow Widget Begin -->
+                <script type="text/javascript"
+                    id="bz-popup-registration-script-3ddd3695-48b3-4327-b59a-70660b57698e"
+                    data-event-id="2"
+                    data-registration-proxy="true"
+                    data-unique-name="2"
+                    data-flow-id="3ddd3695-48b3-4327-b59a-70660b57698e"
+                    data-inline-widget="true"
+                    data-element-id="popoutwidget" data-element-class="">
+                    (function() {
+                        var bz = document.createElement("script");
+                        bz.type = "text/javascript";
+                        bz.async = true;
+                        bz.setAttribute("data-flow-id","3ddd3695-48b3-4327-b59a-70660b57698e")
+                        bz.setAttribute("data-inline-widget", "true")
+                        bz.src = "https://ymca-organizer.ext.dev.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bz, s);
+                    })();
+                </script>
+                <!-- Bizzabo "RSVP" Registration Flow Widget End -->
+            </div>
+
+            <div class="subsection" id="ymca-trreg">
+                <div class="subsection-title">TR_Reg <span class="subsection-event-id" id="eventid-ymca-trreg"></span></div>
+                <button class="bz-button" id="btn-ymca-trreg-popout">Pop out widget - YMCA</button>
+                <a class="event-website-link" id="eventsite-ymca-trreg" href="#" target="_blank" style="display:none">Open Event Website</a>
+                <a class="dashboard-link" id="dashboard-ymca-trreg" href="#" target="_blank" style="display:none">Open Dashboard</a>
+                <div class="inline-title" id="inline-title-ymca-trreg">Inline Widget</div>
+                <div id="inlinewidget-ymca-trreg"></div>
+                <!-- Bizzabo "General Admission" Registration Flow Widget Begin -->
+                <div style="display: inline-flex; width: 100%;"
+                    class="bz-widget-tickets-inline"
+                    data-flow-id="e4c3ea85-f735-4c04-b241-75ec69e46e1a"
+                    data-event-id="430"
+                    data-registration-proxy="true">
+                </div>
+
+                <script type="text/javascript"
+                    class="bz-inline-widget-script"
+                    id="bz-inline-registration-script-e4c3ea85-f735-4c04-b241-75ec69e46e1a"
+                    data-event-id="430"
+                    >
+                    (function(){
+                    var bz=document.createElement("script");
+                    bz.type="text/javascript";
+                    bz.async=true;
+                    bz.src = "https://ymca-organizer.ext.dev.bizzabo.com/widgets/flows/tickets/ticketsSelect.js";
+                    var s=document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bz,s);
+                    })();
+                </script>
+
+                <script type="text/javascript"
+                    id="bz-popup-registration-script-e4c3ea85-f735-4c04-b241-75ec69e46e1a"
+                    data-event-id="430"
+                    data-registration-proxy="true"
+                    data-unique-name="430"
+                    data-flow-id="e4c3ea85-f735-4c04-b241-75ec69e46e1a"
+                    data-inline-widget="true"
+                    >
+                    (function() {
+                        var bz = document.createElement("script");
+                        bz.type = "text/javascript";
+                        bz.async = true;
+                        bz.setAttribute("data-flow-id","e4c3ea85-f735-4c04-b241-75ec69e46e1a")
+                        bz.setAttribute("data-inline-widget", "true")
+                        bz.src = "https://ymca-organizer.ext.dev.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bz, s);
+                    })();
+                </script>
+                <!-- Bizzabo "General Admission" Registration Flow Widget End -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // Build map: scriptId -> { flowType, env, widgetType }
+            var scriptMeta = {};
+
+            // Walk comments to find "Begin" markers
+            var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_COMMENT);
+            while (walker.nextNode()) {
+                var text = walker.currentNode.nodeValue;
+                var beginMatch = text.match(/Bizzabo\s+"([^"]+)"\s+Registration Flow Widget Begin/i);
+                if (!beginMatch) continue;
+                var flowName = beginMatch[1].toLowerCase();
+                var flowType = flowName === "rsvp" ? "rsvp" : (flowName === "general admission" ? "trreg" : null);
+                if (!flowType) continue;
+
+                // Collect all script nodes in this block until End comment
+                var scripts = [];
+                var node = walker.currentNode.nextSibling;
+                while (node) {
+                    if (node.nodeType === 8 && node.nodeValue.match(/Registration Flow Widget End/i)) break;
+                    if (node.nodeType === 1 && node.tagName === "SCRIPT" && node.id) scripts.push(node);
+                    node = node.nextSibling;
+                }
+
+                // Determine block type: has bz-inline-registration-script → inline block, else popout block
+                var inlineScript = null, anyScript = null;
+                scripts.forEach(function(s) {
+                    if (s.id.indexOf("bz-inline-registration-script") === 0) inlineScript = s;
+                    if (!anyScript) anyScript = s;
+                });
+
+                var representativeScript = inlineScript || anyScript;
+                if (!representativeScript) continue;
+
+                var widgetType = inlineScript ? "inline" : "popup";
+                var srcMatch = representativeScript.textContent.match(/bz\.src\s*=\s*["']([^"']+)["']/);
+                if (!srcMatch) continue;
+                var subdomain = srcMatch[1].split("//")[1].split(".")[0];
+                var env = subdomain.replace("-organizer", "").toLowerCase();
+
+                if (env && representativeScript.id) {
+                    scriptMeta[representativeScript.id] = { flowType: flowType, env: env, widgetType: widgetType };
+                }
+            }
+
+            // Now update UI elements
+            Object.keys(scriptMeta).forEach(function(id) {
+                var meta = scriptMeta[id];
+                var scriptEl = document.getElementById(id);
+                if (!scriptEl) return;
+                var eventId = scriptEl.getAttribute("data-event-id");
+                if (!eventId) return;
+
+                var envLabel = meta.env.toUpperCase();
+
+                // Show event id next to subsection title (once, not per widget type)
+                var eventIdSpan = document.getElementById("eventid-" + meta.env + "-" + meta.flowType);
+                if (eventIdSpan && !eventIdSpan.textContent) {
+                    eventIdSpan.textContent = "Event Id = " + eventId;
+                }
+
+                if (meta.widgetType === "popup") {
+                    var btn = document.getElementById("btn-" + meta.env + "-" + meta.flowType + "-popout");
+                    if (btn) btn.textContent = "Pop out widget - " + envLabel;
+                } else {
+                    var title = document.getElementById("inline-title-" + meta.env + "-" + meta.flowType);
+                    if (title) title.textContent = "Inline Widget";
+                }
+
+                // Update dashboard and event website links for this subsection (once)
+                var dashLink = document.getElementById("dashboard-" + meta.env + "-" + meta.flowType);
+                if (dashLink && dashLink.style.display === "none") {
+                    dashLink.href = "https://" + meta.env + "-accounts.ext.dev.bizzabo.com/9/events/" + eventId + "/dashboard";
+                    dashLink.style.display = "inline-block";
+                }
+
+                var siteLink = document.getElementById("eventsite-" + meta.env + "-" + meta.flowType);
+                if (siteLink && siteLink.style.display === "none") {
+                    siteLink.href = "https://" + meta.env + "-events.ext.dev.bizzabo.com/" + eventId;
+                    siteLink.style.display = "inline-block";
+                }
+            });
         })();
-</script>
-<!-- Bizzabo "RSVP" Registration Flow Widget End -->
-<!-- Bizzabo "RSVP" Registration Flow Widget End -->
-
-
-
+    </script>
+</body>
+</html>
