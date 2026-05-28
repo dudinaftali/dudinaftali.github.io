@@ -131,6 +131,26 @@
             color: white;
         }
 
+        .section-divider {
+            border: none;
+            border-top: 2px solid #ccc;
+            margin: 40px 0 0;
+        }
+
+        .prod-section {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .prod-section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
     </style>
 </head>
 <body>
@@ -343,6 +363,120 @@
         </div>
     </div>
 
+    <hr class="section-divider">
+
+    <!-- ==========================================
+         PROD SECTION
+         ========================================== -->
+    <div class="prod-section">
+        <div class="prod-section-title">PROD</div>
+
+        <div class="subsection" id="prod-rsvp">
+            <div class="subsection-title">RSVP <span class="subsection-event-id" id="eventid-prod-rsvp"></span></div>
+            <button class="bz-button prod-rsvp" id="btn-prod-rsvp-popout">Pop out widget - PROD</button>
+            <a class="event-website-link" id="eventsite-prod-rsvp" href="#" target="_blank" style="display:none">Open Event Website</a>
+            <a class="dashboard-link" id="dashboard-prod-rsvp" href="#" target="_blank" style="display:none">Open Dashboard</a>
+
+            <!-- PROD | RSVP | POPOUT WIDGET -->
+            <!-- Bizzabo "RSVP" Registration Flow Widget Begin -->
+            <script type="text/javascript"
+                id="bz-popup-registration-script-e993a5d7-c1ac-45a6-96d9-98da41465cd4"
+                data-event-id="888591"
+                data-registration-proxy="true"
+                data-unique-name="888591"
+                data-flow-id="e993a5d7-c1ac-45a6-96d9-98da41465cd4"
+                data-inline-widget="true"
+                data-element-id="" data-element-class="prod-rsvp">
+                (function() {
+                    var bz = document.createElement("script");
+                    bz.type = "text/javascript";
+                    bz.async = true;
+                    bz.setAttribute("data-flow-id","e993a5d7-c1ac-45a6-96d9-98da41465cd4")
+                    bz.setAttribute("data-inline-widget", "true")
+                    bz.src = "https://organizer.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bz, s);
+                })();
+            </script>
+            <!-- Bizzabo "RSVP" Registration Flow Widget End -->
+        </div>
+
+        <div class="subsection" id="prod-trreg">
+            <div class="subsection-title">TR_Reg <span class="subsection-event-id" id="eventid-prod-trreg"></span></div>
+            <button class="bz-button prod-tr_reg" id="btn-prod-trreg-popout">Pop out widget - PROD</button>
+            <a class="event-website-link" id="eventsite-prod-trreg" href="#" target="_blank" style="display:none">Open Event Website</a>
+            <a class="dashboard-link" id="dashboard-prod-trreg" href="#" target="_blank" style="display:none">Open Dashboard</a>
+            <div class="inline-title" id="inline-title-prod-trreg">Inline Widget</div>
+            <div id="inlinewidget-prod-trreg"></div>
+
+            <!-- PROD | TR_Reg | POPOUT WIDGET -->
+            <!-- Bizzabo "General Admission" Registration Flow Widget Begin -->
+            <script type="text/javascript"
+                id="bz-popup-registration-script-2231e810-e778-4d22-b78f-e89f7ba34b0a"
+                data-event-id="840777"
+                data-registration-proxy="true"
+                data-unique-name="840777"
+                data-flow-id="2231e810-e778-4d22-b78f-e89f7ba34b0a"
+                data-inline-widget="true"
+                data-element-id="" data-element-class="prod-tr_reg">
+                (function() {
+                    var bz = document.createElement("script");
+                    bz.type = "text/javascript";
+                    bz.async = true;
+                    bz.setAttribute("data-flow-id","2231e810-e778-4d22-b78f-e89f7ba34b0a")
+                    bz.setAttribute("data-inline-widget", "true")
+                    bz.src = "https://organizer.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bz, s);
+                })();
+            </script>
+            <!-- Bizzabo "General Admission" Registration Flow Widget End -->
+
+            <!-- PROD | TR_Reg | INLINE WIDGET -->
+            <!-- Bizzabo "General Admission" Registration Flow Widget Begin -->
+            <div style="display: inline-flex; width: 100%;"
+                class="bz-widget-tickets-inline"
+                data-flow-id="2231e810-e778-4d22-b78f-e89f7ba34b0a"
+                data-event-id="840777"
+                data-registration-proxy="true">
+            </div>
+
+            <script type="text/javascript"
+                class="bz-inline-widget-script"
+                id="bz-inline-registration-script-2231e810-e778-4d22-b78f-e89f7ba34b0a"
+                data-event-id="840777">
+                (function(){
+                    var bz=document.createElement("script");
+                    bz.type="text/javascript";
+                    bz.async=true;
+                    bz.src = "https://organizer.bizzabo.com/widgets/flows/tickets/ticketsSelect.js";
+                    var s=document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bz,s);
+                })();
+            </script>
+
+            <script type="text/javascript"
+                id="bz-popup-registration-script-2231e810-e778-4d22-b78f-e89f7ba34b0a-inline"
+                data-event-id="840777"
+                data-registration-proxy="true"
+                data-unique-name="840777"
+                data-flow-id="2231e810-e778-4d22-b78f-e89f7ba34b0a"
+                data-inline-widget="true">
+                (function() {
+                    var bz = document.createElement("script");
+                    bz.type = "text/javascript";
+                    bz.async = true;
+                    bz.setAttribute("data-flow-id","2231e810-e778-4d22-b78f-e89f7ba34b0a")
+                    bz.setAttribute("data-inline-widget", "true")
+                    bz.src = "https://organizer.bizzabo.com/widgets/flows/popup/registrationPopup.js";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bz, s);
+                })();
+            </script>
+            <!-- Bizzabo "General Admission" Registration Flow Widget End -->
+        </div>
+    </div>
+
     <script>
         (function() {
             // Build map: scriptId -> { flowType, env, widgetType }
@@ -380,8 +514,10 @@
                 var widgetType = inlineScript ? "inline" : "popup";
                 var srcMatch = representativeScript.textContent.match(/bz\.src\s*=\s*["']([^"']+)["']/);
                 if (!srcMatch) continue;
-                var subdomain = srcMatch[1].split("//")[1].split(".")[0];
-                var env = subdomain.replace("-organizer", "").toLowerCase();
+                var host = srcMatch[1].split("//")[1];
+                var subdomain = host.split(".")[0];
+                // prod: organizer.bizzabo.com has no env prefix → map to "prod"
+                var env = subdomain === "organizer" ? "prod" : subdomain.replace("-organizer", "").toLowerCase();
 
                 if (env && representativeScript.id) {
                     scriptMeta[representativeScript.id] = { flowType: flowType, env: env, widgetType: widgetType };
@@ -415,13 +551,17 @@
                 // Update dashboard and event website links for this subsection (once)
                 var dashLink = document.getElementById("dashboard-" + meta.env + "-" + meta.flowType);
                 if (dashLink && dashLink.style.display === "none") {
-                    dashLink.href = "https://" + meta.env + "-accounts.ext.dev.bizzabo.com/9/events/" + eventId + "/dashboard";
+                    dashLink.href = meta.env === "prod"
+                        ? "https://organizer.bizzabo.com/9/events/" + eventId + "/dashboard"
+                        : "https://" + meta.env + "-accounts.ext.dev.bizzabo.com/9/events/" + eventId + "/dashboard";
                     dashLink.style.display = "inline-block";
                 }
 
                 var siteLink = document.getElementById("eventsite-" + meta.env + "-" + meta.flowType);
                 if (siteLink && siteLink.style.display === "none") {
-                    siteLink.href = "https://" + meta.env + "-events.ext.dev.bizzabo.com/" + eventId;
+                    siteLink.href = meta.env === "prod"
+                        ? "https://events.bizzabo.com/" + eventId
+                        : "https://" + meta.env + "-events.ext.dev.bizzabo.com/" + eventId;
                     siteLink.style.display = "inline-block";
                 }
             });
